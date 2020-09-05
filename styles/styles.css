@@ -1,0 +1,672 @@
+/*Variables*/
+:root{
+    --principal-color: #15202B;
+    --font-color: #FFFFFF;
+    --gray: #192734;
+    --gray-second: #8899A6;
+    --second-color: #253341;
+    --blue-color: #1DA1F2;
+    --second-blue-color: #19618F;
+    --hover-color: rgba(29, 161, 242, 0.2);
+    --hover-green: rgba(23, 191, 99, 0.2);
+    --hover-red: rgba(224, 36, 94, 0.2);
+    --color-green-hover: rgb(23, 191, 99);
+    --color-red-hover: rgb(224, 36, 94);
+    --search-background: #253341;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--principal-color);
+    color: var(--font-color);
+}
+
+.app_container{
+    width: 85%;
+    margin: .4rem auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+/*Estilos generales*/
+
+svg{
+    width: 1.75rem;
+    cursor: pointer;
+    fill: var(--font-color);
+}
+
+img{
+    width: 100%;
+}
+
+/*Estilos Header nav*/
+.header_nav{
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    height: 98vh;
+    position: relative;
+}
+
+.header_nav .header_img .header_logo{
+    width: fit-content;
+    padding: .7rem;
+    border-radius: 50%;
+    transition: all .2s ease;
+}
+
+.header_nav .header_img .header_logo:hover{
+    background-color: var(--hover-color);
+}
+
+
+.header_nav .header_img .header_logo svg{
+    width: 2rem;
+}
+
+.header_menu a{
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.header_menu a .header_icon{
+    margin-bottom: .5rem;
+    display: flex;
+    align-items: center;
+    padding: .7rem;
+    border-radius: 1.5rem;
+    width: fit-content;
+    transition: all .2s ease;
+}
+
+.header_menu a .header_icon span{
+    font-size: 1.2rem;
+    margin-left: 1.2rem;
+    padding-right: 1rem;
+    color: var(--font-color);
+    font-weight: 700;
+}
+
+.header_menu a .header_icon:hover{
+    background-color: #253341;
+}
+
+.header_menu a .header_icon:hover svg{
+    fill: var(--blue-color);
+}
+
+.header_menu a .header_icon:hover span{
+    color: var(--blue-color);
+}
+
+.header_btn{
+    background-color: var(--blue-color);
+    padding: .9rem;
+    text-align: center;
+    border-radius: 1.5rem;
+    cursor: pointer;
+    width: 90%;
+    transition: all .2s ease;
+}
+
+.header_btn a{
+    text-decoration: none;
+    color: var(--font-color);
+    font-weight: 900;
+    font-size: 1rem;
+}
+
+.header_btn a svg.boton_oculto{
+    display: none;
+}
+
+.header_btn:hover{
+    background-color: rgb(23, 129, 194);
+}
+
+.header_user{
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 1rem;
+    width: 100%;
+}
+
+.header_user .user_container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: .7rem;
+    border-radius: 2rem;
+    transition: all .2s ease;
+}
+
+.header_user .user_container:hover{
+    background-color: var(--hover-color);
+}
+
+.header_user .user_container .user_img_info{
+    width: 80%;
+    display: flex;
+    align-items: center;
+}
+
+.header_user .user_container .user_img_info .user_img img{
+    width: 2.5rem;
+}
+
+
+.header_user .user_container .user_img_info .user_img img{
+    border-radius: 50%;
+}
+
+.header_user .user_container .user_img_info .user_info{
+    display: flex;
+    flex-direction: column;
+    margin-left: .6rem;
+}
+
+.header_user .user_container .user_img_info .user_info span.user_name{
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: var(--font-color);
+}
+
+.header_user .user_container .user_img_info .user_info span{
+    font-weight: 500;
+    font-size: .9rem;
+    color: var(--gray-second);
+}
+
+.header_user .user_container .user_icon svg{
+    width: 1rem;
+}
+
+/*Estilos a Main y Search*/
+
+main{
+    width: 80%;
+}
+
+main .main_container{
+    width: 100%;
+    /*background-color: #1DA1F2;*/
+    display: flex;
+    justify-content: space-between;
+}
+
+main .main_container .home_container{
+    /*background-color: rebeccapurple;*/
+    width: 60%;
+    border: 1px solid #2f3b44;
+}
+
+main .main_container .home_container .main_header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border-bottom: 1px solid #2f3b44;
+}
+
+main .main_container .home_container .main_header .header_user_img{
+    display: flex;
+    align-items: center;
+}
+
+main .main_container .home_container .main_header .header_user_img img{
+    display: none;
+}
+
+main .main_container .home_container .main_header h2{
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+main .main_container .home_container .main_header svg{
+    width: 1.4rem;
+    fill: var(--blue-color);
+}
+
+main .main_container .home_container .home_content{
+   /* background-color: aqua;*/
+    padding: 1rem;
+}
+
+main .main_container .home_container .home_content .img_input{
+    display: flex;
+    align-items: center;
+}
+
+main .main_container .home_container .home_content .img_input img{
+    width: 3rem;
+    border-radius: 50%;
+}
+
+
+main .main_container .home_container .home_content .img_input input{
+    border: none;
+    background-color: transparent;
+    outline: none;
+    font-size: 1.3rem;
+    color: var(--gray-second);
+    margin-left: 1rem;
+}
+
+main .main_container .home_container .home_content .icons{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 3.8rem;
+}
+
+main .main_container .home_container .home_content .icons .icons_share{
+    display: flex;
+}
+
+main .main_container .home_container .home_content .icons .icons_share .icon{
+    padding: .7rem;
+    border-radius: 50%;
+    transition: all .2s ease;
+}
+
+main .main_container .home_container .home_content .icons .icons_share .icon:hover{
+    background-color: var(--hover-color);
+}
+
+main .main_container .home_container .home_content .icons .icons_share .icon svg{
+    fill: var(--blue-color);
+    width: 1.4rem;
+}
+
+main .main_container .home_container .home_content .icons .btn_tweet .btn_container{
+    background-color: var(--second-blue-color);
+    padding: .8rem 1.5rem;
+    border-radius: 2rem;
+}
+
+main .main_container .home_container .home_content .icons .btn_tweet .btn_container a{
+    color: #898e94;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.tweet{
+    padding: .8rem;
+    border-bottom: 1px solid #2f3b44;
+}
+
+.tweet:last-of-type{
+    border-bottom: none;
+}
+
+.tweet .container_tweet{
+    display: flex;
+    justify-content: space-between;
+}
+
+.tweet .container_tweet .tweet_img img{
+    width: 3rem;
+    border-radius: 50%;
+}
+
+.tweet .container_tweet .tweet_info{
+    margin: 0rem .6rem;
+}
+
+.tweet .container_tweet .tweet_info .header_tweet{
+    margin-bottom: .3rem;
+}
+
+.tweet .container_tweet .tweet_info .header_tweet span{
+    margin-right: .2rem;
+}
+
+.tweet .container_tweet .tweet_info .header_tweet .tweet_user, .tweet_time{
+    font-size: .9rem;
+    font-weight: 300;
+    color: var(--gray-second);
+}
+
+.tweet .container_tweet .tweet_text p{
+    font-size: .9rem;
+    line-height: 1.3;
+    margin-bottom: .5rem;
+    border-radius: 1rem 1rem 0 0;
+}
+
+.tweet .container_tweet .tweet_text .tweet_img img{
+    width: 100%;
+    border-radius: 1rem 1rem 0 0;
+}
+
+.tweet .container_tweet .tweet_text .tweet_img{
+    border: 1px solid #2f3b44;
+    border-radius: 1rem;
+}
+
+.tweet .container_tweet .tweet_text .tweet_img .tweet_enlaces{
+    padding: .5rem;
+}
+
+.tweet .container_tweet .tweet_text .tweet_img .tweet_enlaces h3{
+    font-size: .9rem;
+    font-weight: 500;
+    margin-bottom: .3rem;
+}
+
+.tweet .container_tweet .tweet_text .tweet_img .tweet_enlaces p{
+    font-size: .8rem;
+    font-weight: 300;
+}
+
+.tweet .container_tweet .tweet_icon svg{
+    width: 1rem;
+    fill: var(--gray-second);
+}
+
+.tweet .container_tweet .tweet_info .tweet_icons{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    margin-top: 1rem;
+}
+
+.tweet .container_tweet .tweet_info .tweet_icons svg{
+    width: 1.1rem;
+    transition: all ease .2s;
+}
+
+.tweet .container_tweet .tweet_info .tweet_icons svg:hover{
+    fill: var(--blue-color);
+    background-color: var(--hover-color);
+    border-radius: 100%;
+}
+
+.tweet .container_tweet .tweet_info .tweet_icons svg.red:hover{
+    fill: var(--color-red-hover);
+    background-color: var(--hover-red);
+}
+
+.tweet .container_tweet .tweet_info .tweet_icons svg.green:hover{
+    fill: var(--color-green-hover);
+    background-color: var(--hover-green);
+}
+
+main .main_container .search_container{
+  /*  background-color: red;*/
+    width: 38%;
+}
+
+main .main_container .search_container .search{
+    width: 100%;
+    background-color: var(--search-background);
+    display: flex;
+    align-items: center;
+    padding: .8rem 1rem;
+    border-radius: 2rem;
+}
+
+main .main_container .search_container .search svg{
+    width: 1.2rem;
+    fill: var(--gray-second);
+}
+
+main .main_container .search_container .search input{
+    background-color: transparent;
+    border: none;
+    margin-left: .8rem;
+    font-size: .9rem;
+    outline: none;
+    color: var(--gray-second);
+}
+
+main .main_container .search_container .aside{
+    margin-top: 1.2rem;
+    background-color: #192734;
+    /*padding: .8rem 1rem;*/
+    border-radius: 1rem;
+}
+
+main .main_container .search_container .aside .aside_container .header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #2f3b44;
+    padding: .8rem 1rem;
+}
+
+main .main_container .search_container .aside .aside_container .header h3{
+    font-weight: 700;
+}
+
+main .main_container .search_container .aside .aside_container .header svg{
+    width: 1.4rem;
+    fill: var(--blue-color);
+}
+
+main .main_container .search_container .aside .aside_container .trend{
+    padding: .8rem 1rem;
+    border-bottom: 1px solid #2f3b44;
+}
+
+main .main_container .search_container .aside .aside_container .trend:last-of-type{
+    border-bottom: none;
+}
+
+main .main_container .search_container .aside .aside_container .trend .trend_info{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+main .main_container .search_container .aside .aside_container .trend .trend_info span{
+    font-weight: 500;
+    font-size: .8rem;
+    color: var(--gray-second);
+}
+
+main .main_container .search_container .aside .aside_container .trend .trend_info svg{
+    width: .8rem;
+    fill: var(--gray-second);
+}
+
+main .main_container .search_container .aside .aside_container .trend .trend_name{
+    margin-bottom: .2rem;
+}
+
+main .main_container .search_container .aside .aside_container .trend .trend_tweets span{
+    font-weight: 500;
+    font-size: .8rem;
+    color: var(--gray-second);
+}
+
+main .main_container .search_container .aside .aside_container .footer{
+    padding: .8rem 1rem;
+}
+
+main .main_container .search_container .aside .aside_container .footer h3{
+    font-weight: 300;
+    font-size: 1rem;
+    color: var(--blue-color);
+    cursor: pointer;
+}
+
+main .main_container .search_container .aside .aside_container .trend .trend_img{
+    width: 3rem;
+}
+
+main .main_container .search_container .aside .aside_container .trend_follow{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+main .main_container .search_container .aside .aside_container .trend .trend_img img{
+    border-radius: 50%;
+}
+
+main .main_container .search_container .aside .aside_container .trend_follow .user{
+    margin-left: .5rem;
+}
+
+main .main_container .search_container .aside .aside_container .trend_follow .user h3{
+    font-size: 1.1rem;
+}
+
+main .main_container .search_container .aside .aside_container .trend_follow .user span{
+    font-size: .8rem;
+    font-weight: 500;
+    color: var(--gray-second);
+}
+
+main .main_container .search_container .aside .aside_container .trend_img_name{
+    display: flex;
+    align-items: center;
+}
+
+main .main_container .search_container .aside .aside_container .trend_btn_follow{
+    border: 1px solid var(--blue-color);
+    padding: .3rem 1rem;
+    border-radius: 2rem;
+}
+
+main .main_container .search_container .aside .aside_container .trend_btn_follow span{
+    color: var(--blue-color);
+}
+
+.app_container .footer_header{
+    display: none;
+}
+
+.app_container .btn_responsive{
+    display: none;
+}
+
+/*Media queries menu*/
+
+@media only screen and (max-width: 1024px){
+    .app_container{
+        width: 90%;
+    }
+    .header_nav{
+        align-items: center;
+        width: 10%;
+    }
+    
+    .header_menu a .header_icon span{
+        display: none;
+    }
+    .header_btn{
+        width: fit-content;
+        border-radius: 50%;
+    }
+    .header_btn a span{
+        display: none;
+    }
+    .header_btn a svg.boton_oculto{
+        display: flex;
+    }
+    .header_user .user_container .user_img_info .user_info{
+        display: none;
+    }
+    .header_user .user_container .user_icon{
+        display: none;
+    }
+    .header_user .user_container{
+        width: 20%;
+        padding: none;
+    }
+    .header_user .user_container{
+        padding: none;
+    }
+    .header_user .user_container:hover{
+        background-color: var(--principal-color);
+    }
+    .header_user .user_container .user_img_info .user_img{
+        width: 40%;
+    }
+    main{
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 768px){ 
+    .app_container{
+        width: 95%;
+    }
+    .header_nav{
+        width: 20%;
+    }
+    main .main_container .home_container{
+        width: 100%;
+    }
+    .search_container{
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 425px){
+    .app_container .btn_responsive{
+        display: flex;
+        bottom: 85px;
+        right: 25px;
+        position: fixed;
+        z-index: 1;
+    }
+    .app_container{
+        padding: 4rem 0rem;
+    } 
+
+    .app_container{
+        width: 100%;
+        margin: 0rem auto;
+    }
+    .header_nav{
+        display: none;
+    }
+
+    main .main_container{
+        width: 100%;
+    }
+
+    main .main_container .home_container .main_header{
+        position: fixed;
+        top: 0;
+        background-color: var(--principal-color);
+        width: 100%;
+    }
+
+    main .main_container .home_container .main_header .header_user_img img{
+        width: 2rem;
+        border-radius: 50%;
+        display: flex;
+        margin-right: 1rem;
+        display: flex;
+    }
+    
+    .app_container .footer_header{
+        padding: 1rem 1.5rem;
+        border-top: 1px solid #2f3b44;
+        display: flex;
+        width: 100%;
+        position: fixed;
+        bottom: 0;
+        background-color: var(--principal-color);
+    }
+    .app_container .footer_header .footer_header_icons{
+        display: flex;
+        justify-content: space-between;
+        width: 90%;
+        margin: 0 auto;
+        align-items: center;
+    }
+}
